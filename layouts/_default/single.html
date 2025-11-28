@@ -16,10 +16,12 @@
       {{- end -}}
       {{- if .Draft -}}<sup><span class="entry-isdraft">&nbsp;&nbsp;[draft]</span></sup>{{- end -}}
     </h1>
+    {{- if not (.Param "hideDescription") }}
     {{- if .Description }}
     <div class="post-description">
       {{- .Description -}}
     </div>
+    {{- end }}
     {{- end }}
     {{- if not (.Param "hideMeta") }}
     <div class="post-meta">
