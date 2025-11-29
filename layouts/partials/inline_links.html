@@ -5,7 +5,9 @@
   {{- with .GetPage $archivesPath -}}
     <span><a href="{{ .RelPermalink }}">Archives</a></span>
   {{- end -}}
+  {{- if site.Params.showRss -}}
   {{- with .OutputFormats.Get "rss" -}}
     <span><a href="{{ .Permalink }}" target="_blank">RSS</a></span>
+  {{- end -}}
   {{- end -}}
 </div>
